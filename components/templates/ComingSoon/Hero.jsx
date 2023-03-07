@@ -1,5 +1,6 @@
 import ButtonLink from 'components/atoms/ButtonLink';
 import ArrowIcon from 'components/atoms/icons/ArrowIcon';
+import SocialLinks from 'components/shared/SocialLinks';
 
 function Hero() {
   return (
@@ -27,6 +28,7 @@ function Hero() {
           big>
           Hier zum Kontakt
         </ButtonLink>
+        <SocialLinks className="mt-40" />
       </div>
     </section>
   );
