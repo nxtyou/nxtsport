@@ -42,7 +42,13 @@
 }
 
 .hero-bg {
-  @apply absolute -z-10 h-full w-full object-cover object-[30%_100%] md:object-[50%_100%];
-  filter: blur(20.625px) brightness(20%);
-  scale: 1.1;
+  @apply absolute top-0 right-0 left-0 -z-10 h-full w-full;
+  background: url('/images/background-hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.blur-bg {
+  @apply h-full w-full;
+  backdrop-filter: blur(20.625px) brightness(20%);
 }
