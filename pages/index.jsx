@@ -1,3 +1,4 @@
+import Footer from 'components/shared/Footer';
 import NavBar from 'components/shared/NavBar';
 import Hero from 'components/templates/ComingSoon/Hero';
 
@@ -8,6 +9,7 @@ export default function Home() {
       <main className="">
         <Hero />
       </main>
+      <Footer />
     </>
   );
 }
