@@ -8,17 +8,17 @@ function Hero() {
       <div className="hero-bg">
         <div className="blur-bg"></div>
       </div>
-      <div className="text-center">
+      <div className="px-2 text-center sm:px-0">
         <img
           src="/images/exploding-head-emoji.svg"
           width={132}
           alt="exploding head emoji"
           className="mx-auto w-20 sm:w-32"
         />
-        <h1 className="mt-8 max-w-4xl font-eurostar-black-extended text-4xl tracking-[-0.08em] sm:text-5xl sm:leading-[90.5%]">
+        <h1 className="mt-8 max-w-4xl cursor-default font-eurostar-black-extended text-4xl tracking-[-0.08em] sm:text-5xl sm:leading-[90.5%]">
           WE CREATE AWESOME STUFF FOR YOU.
         </h1>
-        <p className="mt-4 text-base text-iron sm:text-lg">
+        <p className="mt-4 cursor-default text-base text-iron sm:text-lg">
           We are going to launch our website soon.
         </p>
         <ButtonLink
