@@ -1,7 +1,13 @@
+import NavBar from 'components/shared/NavBar';
+import Hero from 'components/templates/ComingSoon/Hero';
+
 export default function Home() {
   return (
     <>
-      <main></main>
+      <NavBar ctaText="Anfrage senden" ctaTarget="/" />
+      <main className="">
+        <Hero />
+      </main>
     </>
   );
 }

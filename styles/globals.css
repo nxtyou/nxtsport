@@ -33,3 +33,18 @@
   font-display: swap;
   src: url('../public/fonts/eurostarblackextended.ttf');
 }
+
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/images/background-hero.jpg');
+  background-size: cover;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+.hero::after {
+  @apply pointer-events-none absolute h-full w-full;
+  content: '';
+  backdrop-filter: blur(20.625px) brightness(80%);
+}
