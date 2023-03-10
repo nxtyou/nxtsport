@@ -7,23 +7,21 @@ function Hero() {
   return (
     <section className="relative flex h-screen items-center justify-center overflow-hidden">
       <BackgroundBlur />
-      <div className="px-2 text-center sm:px-0">
+      <div className="max-w-4xl px-2 text-center sm:px-0">
         <img
           src="/images/exploding-head-emoji.svg"
           width={132}
           alt="exploding head emoji"
           className="mx-auto w-20 sm:w-32"
         />
-        <div className="max-w-4xl">
-          <h1 className="mt-8 cursor-default font-eurostar-black-extended text-4xl tracking-[-0.08em] sm:text-5xl sm:leading-[90.5%]">
-            WE CREATE AWESOME STUFF FOR YOU.
-          </h1>
-          <p className="mt-4 cursor-default text-base text-iron sm:text-lg">
-            We are going to launch our website soon.
-          </p>
-        </div>
+        <h1 className="mt-8 cursor-default font-eurostar-black-extended text-4xl tracking-[-0.08em] sm:text-5xl sm:leading-[90.5%]">
+          WE CREATE AWESOME STUFF FOR YOU.
+        </h1>
+        <p className="mt-4 cursor-default text-base text-iron sm:text-lg">
+          We are going to launch our website soon.
+        </p>
         <ButtonLink
-          href="/"
+          href="/contact"
           className="group mx-auto mt-10 flex"
           rightIcon={<ArrowIcon animated />}
           big>
