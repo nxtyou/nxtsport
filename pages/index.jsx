@@ -2,7 +2,7 @@ import Footer from 'components/shared/Footer';
 import NavBar from 'components/shared/NavBar';
 import Hero from 'components/templates/ComingSoon/Hero';
 
-export default function Home() {
+function Home() {
   return (
     <>
       <NavBar ctaText="Anfrage senden" ctaTarget="/" />
@@ -13,3 +13,4 @@ export default function Home() {
     </>
   );
 }
+export default Home;
