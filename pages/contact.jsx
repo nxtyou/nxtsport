@@ -13,7 +13,7 @@ function Contact() {
       <NavBar ctaText="Anfrage senden" ctaTarget="/" />
       <main>
         <BackgroundBlur />
-        <section className="overflow-hidden">
+        <section className="h-screen overflow-hidden">
           <div className="mx-auto mt-36 max-w-4xl px-2 text-center sm:mt-48 sm:px-0">
             <h1 className="mt-8 cursor-default font-eurostar-black-extended text-4xl tracking-[-0.08em] sm:text-5xl sm:leading-[90.5%]">
               WIE KÖNNEN WIR DIR HELFEN?
