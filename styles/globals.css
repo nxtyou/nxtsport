@@ -17,6 +17,14 @@
     /* Safari, Android, iOS */ url('../public/fonts/inter-v12-latin-regular.svg#Inter')
       format('svg'); /* Legacy iOS */
 }
+/* inter-500 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../public/fonts/inter-medium.ttf');
+}
 /* poppins-500 - latin */
 @font-face {
   font-family: 'Poppins';
