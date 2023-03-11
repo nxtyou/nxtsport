@@ -1,12 +1,10 @@
-import BackgroundBlur from 'components/atoms/BackgroundBlur';
 import ButtonLink from 'components/atoms/ButtonLink';
 import ArrowIcon from 'components/atoms/icons/ArrowIcon';
 import SocialLinks from 'components/shared/SocialLinks';
 
 function Hero() {
   return (
-    <section className="relative flex h-screen items-center justify-center overflow-hidden">
-      <BackgroundBlur />
+    <section className="flex h-screen items-center justify-center">
       <div className="max-w-4xl px-2 text-center sm:px-0">
         <img
           src="/images/exploding-head-emoji.svg"
