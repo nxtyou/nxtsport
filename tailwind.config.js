@@ -16,8 +16,9 @@ module.exports = {
         iron: '#D8D8D8'
       },
       screens: {
-        'sm-height': { raw: '(max-height: 800px)' },
-        'xs-height': { raw: '(max-height: 600px)' },
+        'sm-height': { raw: '(max-height: 900px)' },
+        'xs-height': { raw: '(max-height: 740px)' },
+        '2xs-height': { raw: '(max-height: 640px)' },
         '2xs': { raw: '(min-width: 400px)' }
       }
     }
