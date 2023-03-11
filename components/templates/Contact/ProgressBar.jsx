@@ -7,7 +7,7 @@ function ProgressBar({ currentStep }) {
         Service wählen
       </ProgressBarStep>
       <div
-        className="relative h-[1px] w-32 bg-[#747474] sm:w-[400px] md:h-[2px] lg:w-[560px]"
+        className="relative h-[1px] w-32 bg-[#747474] sm:w-[25rem] md:h-[2px] lg:w-[35rem]"
         key="progress-bar">
         <div
           className={`absolute h-[1px] bg-white opacity-70 transition-all md:h-[2px] ${
