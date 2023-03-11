@@ -14,6 +14,10 @@ module.exports = {
         'international-orange': '#FF5003',
         'regal-blue': '#003F7D',
         iron: '#D8D8D8'
+      },
+      screens: {
+        'sm-height': { raw: '(max-height: 800px)' },
+        'xs-height': { raw: '(max-height: 600px)' }
       }
     }
   },
