@@ -13,7 +13,7 @@ const ButtonLink = ({
   return (
     <Link
       href={href}
-      className={`flex w-fit items-center rounded-full px-7 py-4 font-poppins font-medium transition-all ${
+      className={`flex w-fit items-center rounded-full px-5 py-3 font-poppins font-medium transition-all sm:px-7 sm:py-4 ${
         black ? 'bg-black text-white hover:text-iron' : 'bg-white text-black hover:bg-iron'
       } ${big ? 'md:text-lg' : ''} ${className || ''}`}>
       {leftIcon && <span className="mr-3">{leftIcon}</span>}
