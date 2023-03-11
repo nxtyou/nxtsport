@@ -7,7 +7,7 @@ function Home() {
   return (
     <>
       <NavBar ctaText="Anfrage senden" ctaTarget="/contact" />
-      <main>
+      <main className="h-screen overflow-hidden">
         <BackgroundBlur />
         <Hero />
       </main>

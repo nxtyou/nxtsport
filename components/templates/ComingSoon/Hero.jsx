@@ -4,8 +4,8 @@ import SocialLinks from 'components/shared/SocialLinks';
 
 function Hero() {
   return (
-    <section className="flex h-screen items-center justify-center overflow-hidden">
-      <div className="mt-14 max-w-4xl px-2 text-center sm:mt-20 sm:px-0">
+    <section className="flex justify-center">
+      <div className="mt-36 max-w-4xl px-2 text-center sm:px-0">
         <img
           src="/images/exploding-head-emoji.svg"
           width={132}
