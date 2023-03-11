@@ -17,7 +17,8 @@ module.exports = {
       },
       screens: {
         'sm-height': { raw: '(max-height: 800px)' },
-        'xs-height': { raw: '(max-height: 600px)' }
+        'xs-height': { raw: '(max-height: 600px)' },
+        '2xs': { raw: '(min-width: 400px)' }
       }
     }
   },
