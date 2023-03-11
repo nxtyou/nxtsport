@@ -60,3 +60,13 @@
   @apply h-full w-full;
   backdrop-filter: blur(20.625px) brightness(20%);
 }
+
+.contact-form input,
+.contact-form textarea {
+  @apply block w-full border-b-2 border-[#747474] bg-transparent p-1;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  @apply text-[#747474];
+}

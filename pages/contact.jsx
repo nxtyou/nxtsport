@@ -8,6 +8,14 @@ import { useState } from 'react';
 function Contact() {
   const [currentStep, setCurrentStep] = useState(1);
 
+  function goToNextStep() {
+    setCurrentStep(currentStep + 1);
+  }
+
+  function goToPreviousStep() {
+    setCurrentStep(currentStep - 1);
+  }
+
   return (
     <>
       <NavBar ctaText="Anfrage senden" ctaTarget="/" />
@@ -23,8 +31,13 @@ function Contact() {
               hier einen oder mehrere Services um dann mit uns in Kontakt zu treten!
             </p>
           </div>
-          <Form currentStep={currentStep} className="mt-10 sm:mt-20" />
-          <SocialLinks className="mt-16 xl:mt-32" />
+          <Form
+            currentStep={currentStep}
+            goToNextStep={goToNextStep}
+            goToPreviousStep={goToPreviousStep}
+            className="mt-10 sm:mt-20"
+          />
+          <SocialLinks className="mt-10 xl:mt-32 2xs:mt-16" />
         </section>
       </main>
       <Footer />
