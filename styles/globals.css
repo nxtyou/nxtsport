@@ -59,6 +59,7 @@
 .blur-bg {
   @apply h-full w-full;
   backdrop-filter: blur(20.625px) brightness(20%);
+  filter: blur(0.01px) grayscale(0.001);
 }
 
 .contact-form input,
