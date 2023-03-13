@@ -70,3 +70,7 @@
 .contact-form textarea::placeholder {
   @apply text-[#747474];
 }
+
+.error-message {
+  @apply text-sm text-red-700;
+}

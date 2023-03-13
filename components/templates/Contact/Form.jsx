@@ -2,12 +2,20 @@ import ArrowIcon from 'components/atoms/icons/ArrowIcon';
 import ArrowLeft from 'components/atoms/icons/ArrowLeft';
 import ArrowRight from 'components/atoms/icons/ArrowRight';
 import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 import ProgressBar from './ProgressBar';
 import ServicesChoices from './ServicesChoices';
 
 function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
   const [selectedChoices, setSelectedChoices] = useState([]);
   const [choicesError, setChoicesError] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors }
+  } = useForm();
 
   function nextOnClick() {
     if (selectedChoices.length === 0) setChoicesError(true);
@@ -27,6 +35,10 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
     setSelectedChoices(selectedChoices.filter((choice) => choice !== choiceToRemove));
   }
 
+  function onSubmit(data) {
+    console.log(data);
+  }
+
   useEffect(() => {
     if (choicesError) setChoicesError(false);
   }, [selectedChoices]);
@@ -38,7 +50,7 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
         <>
           <div className="mt-14">
             {choicesError && (
-              <p className="text-center text-sm text-red-700 sm:text-left">
+              <p className="error-message text-center sm:text-left">
                 Please pick at least one service.
               </p>
             )}
@@ -61,17 +73,37 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
         </>
       ) : (
         <>
-          <form className="contact-form mt-20">
+          <form id="form" className="contact-form mt-20" onSubmit={handleSubmit(onSubmit)}>
             <div className="flex flex-col gap-8 sm:flex-row">
-              <div className="flex-1">
-                <input type="text" name="fullName" placeholder="Vollständiger Name*" />
+              <div className="relative flex-1">
+                {errors.fullName && (
+                  <p className="error-message absolute -top-5">Please enter a valid full name.</p>
+                )}
+                <input
+                  {...register('fullName', { required: true })}
+                  type="text"
+                  name="fullName"
+                  placeholder="Vollständiger Name*"
+                />
               </div>
-              <div className="flex-1">
-                <input type="email" name="email" placeholder="E-Mail Adresse*" />
+              <div className="relative flex-1">
+                {errors.email && (
+                  <p className="error-message absolute -top-5">Please enter a valid email.</p>
+                )}
+                <input
+                  {...register('email', {
+                    required: true,
+                    pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+                  })}
+                  type="email"
+                  name="email"
+                  placeholder="E-Mail Adresse*"
+                />
               </div>
             </div>
             <div className="mt-9">
               <textarea
+                {...register('message', { required: false })}
                 name="message"
                 placeholder="Deine Nachricht"
                 wrap="soft"
@@ -88,6 +120,7 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
               <span>Zurück</span>
             </button>
             <button
+              form="form"
               type="submit"
               className={`group flex w-fit items-center rounded-full bg-white px-5 py-2 font-poppins font-medium text-black transition-all hover:bg-iron`}>
               Anfrage senden
