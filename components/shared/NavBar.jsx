@@ -19,7 +19,7 @@ function NavBar({ ctaText, ctaTarget }) {
           href={ctaTarget}
           aria-label={ctaText}
           className="group flex"
-          rightIcon={<ArrowIcon animated />}
+          rightIcon={<ArrowIcon animated className="h-4 w-4" />}
           big>
           {ctaText}
         </ButtonLink>

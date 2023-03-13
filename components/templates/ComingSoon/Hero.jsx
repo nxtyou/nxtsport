@@ -21,7 +21,7 @@ function Hero() {
         <ButtonLink
           href="/contact"
           className="group mx-auto mt-10 flex"
-          rightIcon={<ArrowIcon animated />}
+          rightIcon={<ArrowIcon animated className="h-4 w-4" />}
           big>
           Hier zum Kontakt
         </ButtonLink>

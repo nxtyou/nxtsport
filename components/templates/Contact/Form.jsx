@@ -129,7 +129,7 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
               className={`group flex w-fit items-center rounded-full bg-white px-5 py-2 font-poppins font-medium text-black transition-all hover:bg-iron`}>
               Anfrage senden
               <span className="ml-2">
-                <ArrowIcon animated />
+                <ArrowIcon animated className="h-4 w-4" />
               </span>
             </button>
           </div>
