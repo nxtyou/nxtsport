@@ -50,7 +50,7 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
         <>
           <div className="mt-14">
             {choicesError && (
-              <p className="error-message text-center sm:text-left">
+              <p role="alert" className="error-message text-center sm:text-left">
                 Please pick at least one service.
               </p>
             )}
@@ -77,7 +77,9 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
             <div className="flex flex-col gap-8 sm:flex-row">
               <div className="relative flex-1">
                 {errors.fullName && (
-                  <p className="error-message absolute -top-5">Please enter a valid full name.</p>
+                  <p role="alert" className="error-message absolute -top-5">
+                    Please enter a valid full name.
+                  </p>
                 )}
                 <input
                   {...register('fullName', { required: true })}
@@ -88,7 +90,9 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
               </div>
               <div className="relative flex-1">
                 {errors.email && (
-                  <p className="error-message absolute -top-5">Please enter a valid email.</p>
+                  <p role="alert" className="error-message absolute -top-5">
+                    Please enter a valid email.
+                  </p>
                 )}
                 <input
                   {...register('email', {
