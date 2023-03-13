@@ -48,9 +48,11 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
       <ProgressBar currentStep={currentStep} />
       {currentStep === 1 ? (
         <>
-          <div className="mt-14">
+          <div className="relative mt-14">
             {choicesError && (
-              <p role="alert" className="error-message text-center sm:text-left">
+              <p
+                role="alert"
+                className="error-message absolute -top-6 right-0 left-0 text-center sm:-top-7">
                 Please pick at least one service.
               </p>
             )}
