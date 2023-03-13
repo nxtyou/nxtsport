@@ -7,6 +7,17 @@ import ServicesChoices from './ServicesChoices';
 
 function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
   const [selectedChoices, setSelectedChoices] = useState([]);
+  const [choicesError, setChoicesError] = useState(false);
+
+  function nextOnClick() {
+    if (selectedChoices.length === 0) setChoicesError(true);
+    else goToNextStep();
+  }
+
+  function choiceOnClick(choice) {
+    if (selectedChoices.indexOf(choice) >= 0) removeChoice(choice);
+    else addChoice(choice);
+  }
 
   function addChoice(choice) {
     setSelectedChoices([...selectedChoices, choice]);
@@ -17,7 +28,7 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
   }
 
   useEffect(() => {
-    console.log(selectedChoices);
+    if (choicesError) setChoicesError(false);
   }, [selectedChoices]);
 
   return (
@@ -25,10 +36,21 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
       <ProgressBar currentStep={currentStep} />
       {currentStep === 1 ? (
         <>
-          <ServicesChoices className="mt-14" addChoice={addChoice} removeChoice={removeChoice} />
+          <div className="mt-14">
+            {choicesError && (
+              <p className="text-center text-sm text-red-700 sm:text-left">
+                Please pick at least one service.
+              </p>
+            )}
+            <ServicesChoices
+              className="mt-2"
+              choiceOnClick={choiceOnClick}
+              selectedChoices={selectedChoices}
+            />
+          </div>
           <div className="mt-10 flex justify-end lg:mt-20 lg:justify-start">
             <button
-              onClick={goToNextStep}
+              onClick={nextOnClick}
               className="group relative right-16 flex items-center gap-2 font-medium opacity-50 transition-all hover:opacity-100">
               <span>Weiter</span>
               <span>

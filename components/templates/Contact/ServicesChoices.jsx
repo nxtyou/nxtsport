@@ -1,6 +1,6 @@
 import ChoiceButton from 'components/atoms/ChoiceButton';
 
-function ServicesChoices({ addChoice, removeChoice, className }) {
+function ServicesChoices({ selectedChoices, choiceOnClick, className }) {
   const CHOICES = [
     'Content Creation',
     'Digital Community Building',
@@ -16,7 +16,9 @@ function ServicesChoices({ addChoice, removeChoice, className }) {
       }`}>
       {CHOICES.map((choice, index) => (
         <li key={index}>
-          <ChoiceButton addChoice={addChoice} removeChoice={removeChoice}>
+          <ChoiceButton
+            toggled={selectedChoices.indexOf(choice) >= 0}
+            onClick={() => choiceOnClick(choice)}>
             {choice}
           </ChoiceButton>
         </li>
