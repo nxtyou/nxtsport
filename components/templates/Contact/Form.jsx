@@ -64,10 +64,10 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
           <form className="contact-form mt-20">
             <div className="flex flex-col gap-8 sm:flex-row">
               <div className="flex-1">
-                <input type="text" name="fullName" placeholder="Vollständiger Name" />
+                <input type="text" name="fullName" placeholder="Vollständiger Name*" />
               </div>
               <div className="flex-1">
-                <input type="email" name="email" placeholder="E-Mail Adresse" />
+                <input type="email" name="email" placeholder="E-Mail Adresse*" />
               </div>
             </div>
             <div className="mt-9">
