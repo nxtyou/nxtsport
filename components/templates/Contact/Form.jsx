@@ -113,6 +113,7 @@ function Form({ currentStep, goToNextStep, goToPreviousStep, className }) {
                 name="message"
                 placeholder="Deine Nachricht"
                 wrap="soft"
+                maxLength={300}
                 className="resize-none"></textarea>
             </div>
           </form>
